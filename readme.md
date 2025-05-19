@@ -58,9 +58,8 @@ Develop an IoT-driven Oracle database solution to monitor, control, and optimize
 - **Home → Appliances** (1:N)  
 - **Appliance → EnergyUsageRecord** (1:N)  
 ```  
-```  
-%% Fixed Mermaid ER Diagram for Phase I
-```  
+
+
 ```  
 erDiagram
     USER ||--o{ HOME : "Manages"
@@ -92,5 +91,5 @@ erDiagram
         decimal kWh_consumed
     }
   ```  
-  ```  
-    
+   
+
