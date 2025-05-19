@@ -57,50 +57,40 @@ Develop an IoT-driven Oracle database solution to monitor, control, and optimize
 - **User → Homes** (1:N)  
 - **Home → Appliances** (1:N)  
 - **Appliance → EnergyUsageRecord** (1:N)  
+```  
+```  
+%% Fixed Mermaid ER Diagram for Phase I
+```  
+```  
+erDiagram
+    USER ||--o{ HOME : "Manages"
+    HOME ||--o{ APPLIANCE : "Contains"
+    APPLIANCE ||--o{ ENERGY_USAGE : "Generates"
 
----
-
- ``` 
-  ``` 
-## 📊 Core Diagram  
-**Entity-Relationship Model (Phase I Scope)**  
- ```  
- %% Core Diagram: Smart Home Energy Management System (Phase I)
-classDiagram
-    direction TB
-
-    %% Entities
-    class User {
-        +user_id (PK)
-        +name
-        +email
-        +phone
-        +manage_homes()
+    USER {
+        int user_id PK
+        varchar name
+        varchar email
+        varchar phone
     }
 
-    class Home {
-        +home_id (PK)
-        +address
-        +sq_footage
-        +add_appliance()
+    HOME {
+        int home_id PK
+        varchar address
+        decimal sq_footage
     }
 
-    class Appliance {
-        +appliance_id (PK)
-        +type
-        +wattage
-        +schedule()
+    APPLIANCE {
+        int appliance_id PK
+        varchar type
+        decimal wattage
     }
 
-    class EnergyUsageRecord {
-        +record_id (PK)
-        +timestamp
-        +kWh_consumed
-        +log_usage()
+    ENERGY_USAGE {
+        int record_id PK
+        timestamp datetime
+        decimal kWh_consumed
     }
-
-    %% Relationships
-    User "1" --> "N" Home : "Manages"
-    Home "1" --> "N" Appliance : "Contains"
-    Appliance "1" --> "N" EnergyUsageRecord : "Generates"
- ``` 
+  ```  
+  ```  
+    
