@@ -103,7 +103,7 @@ The model illustrates how smart devices, users, and analytics platforms interact
 ---
 
 
-mermaid
+```mermaid
 flowchart LR
     %% Swimlane-style Smart Home Energy Optimization Process
 
@@ -139,7 +139,7 @@ flowchart LR
     A1 --> A2 --> B1 --> B2 --> C1 --> D1 --> D2 --> D3
     D3 -- Yes --> D4 --> C2 --> C3 --> E1 --> E2
     D3 -- No --> C1
-
+```
 # 📊 Diagram Explanation: Smart Home Energy Optimization
 
 ## 🧠 Components & Interactions
